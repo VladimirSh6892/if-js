@@ -1,6 +1,6 @@
-let user = "John Doe";
+let user = 'John Doe';
 console.log(user); //output John Doe
-const student = "Vladimir";
+const student = 'Vladimir';
 console.log(student); //output Vladimir
 user = student;
 console.log(user); //output Vladimir
@@ -8,7 +8,7 @@ console.log(user); //output Vladimir
 let test = 1;
 test += 1;
 console.log(test); //output 2
-test += "1";
+test += '1';
 console.log(test); //output 21
 test -= 1;
 console.log(test); //output 20
@@ -30,7 +30,7 @@ for(i = 0; i<arr2.length; i++) {
 
 const arr3 = [2, 5 ,8, 15, 0, 6, 20, 3];
 for( i=0 ; i<arr3.length ; i++ ) {
-    if((arr3[i] % 2 ) === 0 && arr3[i] !==0 ) {
+    if(!(arr3[i] % 2 )) {
         console.log(arr3[i]);
     }
 }
