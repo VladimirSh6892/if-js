@@ -60,3 +60,7 @@ function max(a, b) {
   return b;
 }
 console.log(max(25, 28));
+
+let arr = [12, 22, 20, 450, 88, 54, 30, 24, 101, 28];
+arr = arr.join().replace(/0/g, 'zero');
+console.log(arr.split(','));
