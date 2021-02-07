@@ -36,3 +36,21 @@ for (i = 0; i < arr3.length; i++) {
     console.log(arr3[i]);
   }
 }
+
+//  lessons3
+
+function min(a, b) {
+  if (a > b) {
+    return b;
+  }
+  return a;
+}
+console.log(min(25, 28));
+
+function max(a, b) {
+  if (a > b) {
+    return a;
+  }
+  return b;
+}
+console.log(max(25, 28));
