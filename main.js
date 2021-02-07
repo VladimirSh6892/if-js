@@ -39,6 +39,12 @@ for (i = 0; i < arr3.length; i++) {
 
 //  lessons3
 
+const palindrome = (str) => {
+  str.toLowerCase();
+  return str === str.split('').reverse().join('') ? 'True' : 'False';
+};
+console.log(palindrome('noon'));
+
 function min(a, b) {
   if (a > b) {
     return b;
