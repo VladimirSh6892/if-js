@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-plusplus */
+//  lessons2
+
 let user = 'John Doe';
 console.log(user); //   output John Doe
 const student = 'Vladimir';
