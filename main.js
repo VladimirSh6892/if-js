@@ -81,3 +81,10 @@ const colorText = () => {
 text1.addEventListener('click', colorText());
 text2.addEventListener('click', colorText());
 text3.addEventListener('click', colorText());
+
+function sum(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+console.log(sum(5)(2));
