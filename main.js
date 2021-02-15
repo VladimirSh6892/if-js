@@ -64,3 +64,27 @@ console.log(max(25, 28));
 let arr = [12, 22, 20, 450, 88, 54, 30, 24, 101, 28];
 arr = arr.join().replace(/0/g, 'zero');
 console.log(arr.split(','));
+
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
+const text3 = document.getElementById('text3');
+
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const colorText = () => {
+  let x = 0;
+  return (e) => {
+    e.target.style.color = colors[x];
+    x = x > colors.length ? 0 : x + 1;
+  };
+};
+
+text1.addEventListener('click', colorText());
+text2.addEventListener('click', colorText());
+text3.addEventListener('click', colorText());
+
+function sum(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+console.log(sum(5)(2));
