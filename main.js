@@ -74,7 +74,7 @@ const colorText = () => {
   let x = 0;
   return (e) => {
     e.target.style.color = colors[x];
-    x = x > 3 ? 0 : x + 1;
+    x = x > colors.length ? 0 : x + 1;
   };
 };
 
