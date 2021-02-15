@@ -144,3 +144,8 @@ const search = (str) => {
 };
 
 console.log(search('net '));
+
+const date = '2020-11-26';
+const dateFormat = (date2) => date2.split('-').reverse().join('.');
+
+console.log(dateFormat(date));
