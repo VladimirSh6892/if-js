@@ -82,12 +82,10 @@ text1.addEventListener('click', colorText());
 text2.addEventListener('click', colorText());
 text3.addEventListener('click', colorText());
 
-function sum(a) {
-  return function (b) {
-    return a + b;
-  };
+function sum(a, b) {
+  return a + b;
 }
-console.log(sum(5)(2));
+console.log(sum(5, 2));
 
 const data = [
   {
