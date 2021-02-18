@@ -1,7 +1,6 @@
-/* eslint-disable no-debugger */
 //  lessons2
 
-/* let user = 'John Doe';
+let user = 'John Doe';
 console.log(user); //   output John Doe
 const student = 'Vladimir';
 console.log(student); //    output Vladimir
@@ -88,7 +87,7 @@ text3.addEventListener('click', colorText());
 function sum(a, b) {
   return a + b;
 }
-console.log(sum(5, 2)); */
+console.log(sum(5, 2));
 
 //  lessons5
 
@@ -136,67 +135,44 @@ const data = [
 ];
 
 //  first solution
-/* const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase()
-.replaceAll(' ', '').includes(strToCompare);
+const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '').includes(strToCompare);
 
 function serch(serchData) {
-  const result = [];
+  const result1 = [];
   const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
   for (let index = 0; index < data.length; index++) {
     const { country, city, hotel } = data[index];
     const srcString = `${country}, ${city}, ${hotel}`;
     if (checkStringTolowerCase(srcString, serchStringLowerCase)) {
-      result.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
+      result1.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
     }
   }
-  return result;
+  return result1;
 }
-console.log(serch('German ')); */
+console.log(serch('Ger '));
 
 //  second solution
-/* const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '')
-.includes(strToCompare);
-
-function serch(serchData) {
-  const result = [];
+function searchSec(serchData) {
+  const result2 = [];
   const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
   data.forEach((object) => {
     const { country, city, hotel } = object;
     const srcString = `${country}, ${city}, ${hotel}`;
     if (checkStringTolowerCase(srcString, serchStringLowerCase)) {
-      result.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
+      result2.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
     }
   });
-  return result;
+  return result2;
 }
-console.log(serch('German ')); */
+console.log(searchSec('Rot '));
 
 //  third solution
-
-/* const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase()
-.replaceAll(' ', '').includes(strToCompare);
-
-function serch(serchData) {
-  const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
-
-  data.filter((object) => {
-    const { country, city, hotel } = object;
-    const srcString = `${country}, ${city}, ${hotel}`;
-    return checkStringTolowerCase(srcString, serchStringLowerCase);
-  }).map(({ country, city, hotel }) => `${country}, ${city}, ${hotel}`);
-}
-console.log(serch('German ')); */
-
-//  fourth solution
-
-const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '').includes(strToCompare);
-
-function serch(serchData) {
+function searchFour(serchData) {
   const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
 
   return data.filter(({ country, city, hotel }) => checkStringTolowerCase(`${country}, ${city}, ${hotel}`, serchStringLowerCase)).map(({ country, city, hotel }) => `${country}, ${city}, ${hotel}`);
 }
-console.log(serch('German '));
+console.log(searchFour('Rus '));
 
 const date = '2020-11-26';
 const dateFormat = (date2) => date2.split('-').reverse().join('.');
