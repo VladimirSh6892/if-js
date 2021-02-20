@@ -135,6 +135,7 @@ const data = [
 ];
 
 //  first solution
+
 const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '').includes(strToCompare);
 
 function searchFirst(searchData) {
