@@ -137,9 +137,9 @@ const data = [
 //  first solution
 const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '').includes(strToCompare);
 
-function serch(serchData) {
+function searchFirst(searchData) {
   const result1 = [];
-  const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
   for (let index = 0; index < data.length; index++) {
     const { country, city, hotel } = data[index];
     const srcString = `${country}, ${city}, ${hotel}`;
@@ -149,12 +149,12 @@ function serch(serchData) {
   }
   return result1;
 }
-console.log(serch('Ger '));
+console.log(searchFirst('Ger '));
 
 //  second solution
-function searchSec(serchData) {
+function searchSec(searchData) {
   const result2 = [];
-  const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
   data.forEach((object) => {
     const { country, city, hotel } = object;
     const srcString = `${country}, ${city}, ${hotel}`;
@@ -167,12 +167,12 @@ function searchSec(serchData) {
 console.log(searchSec('Rot '));
 
 //  third solution
-function searchFour(serchData) {
-  const serchStringLowerCase = serchData.replaceAll(' ', '').toLowerCase();
+function searchThird(searchData) {
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
 
   return data.filter(({ country, city, hotel }) => checkStringTolowerCase(`${country}, ${city}, ${hotel}`, serchStringLowerCase)).map(({ country, city, hotel }) => `${country}, ${city}, ${hotel}`);
 }
-console.log(searchFour('Rus '));
+console.log(searchThird('Rus '));
 
 const date = '2020-11-26';
 const dateFormat = (date2) => date2.split('-').reverse().join('.');
