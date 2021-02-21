@@ -65,6 +65,8 @@ let arr = [12, 22, 20, 450, 88, 54, 30, 24, 101, 28];
 arr = arr.join().replace(/0/g, 'zero');
 console.log(arr.split(','));
 
+//  lessons4
+
 const text1 = document.getElementById('text1');
 const text2 = document.getElementById('text2');
 const text3 = document.getElementById('text3');
@@ -82,9 +84,98 @@ text1.addEventListener('click', colorText());
 text2.addEventListener('click', colorText());
 text3.addEventListener('click', colorText());
 
-function sum(a) {
-  return function (b) {
-    return a + b;
-  };
+function sum(a, b) {
+  return a + b;
 }
-console.log(sum(5)(2));
+console.log(sum(5, 2));
+
+//  lessons5
+
+const data = [
+  {
+    country: 'Russia',
+    city: 'Saint Petersburg',
+    hotel: 'Hotel Leopold',
+  },
+  {
+    country: 'Spain',
+    city: 'Santa Cruz de Tenerife',
+    hotel: 'Apartment Sunshine',
+  },
+  {
+    country: 'Slowakia',
+    city: 'Vysokie Tatry',
+    hotel: 'Villa Kunerad',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hostel Friendship',
+  },
+  {
+    country: 'Indonesia',
+    city: 'Bali',
+    hotel: 'Ubud Bali Resort&SPA',
+  },
+  {
+    country: 'Netherlands',
+    city: 'Rotterdam',
+    hotel: 'King Kong Hostel',
+  },
+  {
+    country: 'Marocco',
+    city: 'Ourika',
+    hotel: 'Rokoko Hotel',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hotel Rehberge Berlin Mitte',
+  },
+];
+
+//  first solution
+
+const checkStringTolowerCase = (str, strToCompare) => str.toLocaleLowerCase().replaceAll(' ', '').includes(strToCompare);
+
+function searchFirst(searchData) {
+  const result1 = [];
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
+  for (let index = 0; index < data.length; index++) {
+    const { country, city, hotel } = data[index];
+    const srcString = `${country}, ${city}, ${hotel}`;
+    if (checkStringTolowerCase(srcString, serchStringLowerCase)) {
+      result1.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
+    }
+  }
+  return result1;
+}
+console.log(searchFirst('Ger '));
+
+//  second solution
+function searchSec(searchData) {
+  const result2 = [];
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
+  data.forEach((object) => {
+    const { country, city, hotel } = object;
+    const srcString = `${country}, ${city}, ${hotel}`;
+    if (checkStringTolowerCase(srcString, serchStringLowerCase)) {
+      result2.push(`Страна: ${country}, Город: ${city}, Отель: ${hotel}`);
+    }
+  });
+  return result2;
+}
+console.log(searchSec('Rot '));
+
+//  third solution
+function searchThird(searchData) {
+  const serchStringLowerCase = searchData.replaceAll(' ', '').toLowerCase();
+
+  return data.filter(({ country, city, hotel }) => checkStringTolowerCase(`${country}, ${city}, ${hotel}`, serchStringLowerCase)).map(({ country, city, hotel }) => `${country}, ${city}, ${hotel}`);
+}
+console.log(searchThird('Rus '));
+
+const date = '2020-11-26';
+const dateFormat = (date2) => date2.split('-').reverse().join('.');
+
+console.log(dateFormat(date));

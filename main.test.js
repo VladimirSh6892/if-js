@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
-function sum(a) {
-  return function (b) {
-    return a + b;
-  };
+function sum(a, b) {
+  return a + b;
 }
 
 test('Sum function should return sum of two values', () => {
