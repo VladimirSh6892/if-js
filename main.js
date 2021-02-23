@@ -39,10 +39,14 @@ for (let i = 0; i < arr3.length; i++) {
 
 //  lessons3
 
-const palindrome = (str) => {
-  str.toLowerCase();
-  return str === str.split('').reverse().join('') ? 'True' : 'False';
-};
+function palindrome(text) {
+  for (let i = 0; i < text.length / 2; i += 1) {
+    if (text[i] !== text[text.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
 console.log(palindrome('noon'));
 
 function min(a, b) {
@@ -352,3 +356,9 @@ function searchHotel(searchHotels) {
   return res;
 }
 console.log(searchHotel('stei '));
+
+const palindromeString = (str) => {
+  str.toLowerCase();
+  return str === str.split('').reverse().join('') ? 'True' : 'False';
+};
+console.log(palindromeString('noon'));
