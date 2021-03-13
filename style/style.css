@@ -1,3 +1,27 @@
-.changeColor{
-    font-size: 40px;
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-display: swap;
+  src: url(../font/Roboto-Regular.woff) format("woff"),
+    url(../font/Roboto-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-display: swap;
+  src: url(../font/Roboto-Medium.woff) format("woff"),
+    url(../font/Roboto-Medium.woff2) format("woff2");
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.changeColor {
+  font-size: 40px;
+  border: inset goldenrod 4px;
 }
