@@ -16,6 +16,6 @@ module.exports = {
   rules: {
     'no-plusplus': 'off',
     'eslint-disable no-undef': 'off',
-    'no-restricted-syntax': ["error", "FunctionExpression", "WithStatement", "BinaryExpression[operator='in']"],
+    'no-restricted-syntax': 'off',
   },
 };
