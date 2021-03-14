@@ -1,5 +1,5 @@
 //  lessons9
-
+console.log('<-----Lessons9----->');
 const text4 = document.getElementById('text4');
 const text5 = document.getElementById('text5');
 const text6 = document.getElementById('text6');
