@@ -1,0 +1,55 @@
+<svg class="sprites" xmlns="http://www.w3.org/2000/svg">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="night">
+    <path d="M25.61 10.61V4.39h-6.22L15 0l-4.39 4.39H4.39v6.22L0 15l4.39 4.39v6.22h6.22L15 30l4.39-4.39h6.22v-6.22L30 15l-4.39-4.39zM15 22.958a7.924 7.924 0 01-3.316-.73c2.732-1.26 4.642-4.018 4.642-7.228s-1.91-5.968-4.642-7.228A7.924 7.924 0 0115 7.042c4.39 0 7.958 3.568 7.958 7.958 0 4.39-3.568 7.958-7.958 7.958z" fill="#fff"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="night_mobile">
+    <path d="M13.659 5.659V2.34H10.34L8 0 5.659 2.341H2.34V5.66L0 8l2.341 2.341v3.318H5.66L8 16l2.341-2.341h3.318V10.34L16 8l-2.341-2.341zM8 12.244c-.63 0-1.23-.141-1.768-.389A4.248 4.248 0 008.707 8a4.248 4.248 0 00-2.475-3.855A4.227 4.227 0 018 3.756 4.247 4.247 0 0112.244 8 4.247 4.247 0 018 12.244z" fill="#fff"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="accountcircle">
+    <path d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 6c3.32 0 6 2.68 6 6s-2.68 6-6 6-6-2.68-6-6 2.68-6 6-6zm0 28.4c-5 0-9.42-2.56-12-6.44.06-3.98 8-6.16 12-6.16 3.98 0 11.94 2.18 12 6.16-2.58 3.88-7 6.44-12 6.44z" fill="#fff"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="accountcircle_mobile">
+    <path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 3.6c1.992 0 3.6 1.608 3.6 3.6s-1.608 3.6-3.6 3.6a3.595 3.595 0 01-3.6-3.6c0-1.992 1.608-3.6 3.6-3.6zm0 17.04a8.64 8.64 0 01-7.2-3.864c.036-2.388 4.8-3.696 7.2-3.696 2.388 0 7.164 1.308 7.2 3.696A8.64 8.64 0 0112 20.64z" fill="#fff"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 92" id="supp">
+    <path d="M67.167 54.333V71h-8.334V54.333h8.334zm-50 0V71H13a4.179 4.179 0 01-4.167-4.167v-12.5h8.334zM38 .167C17.292.167.5 16.958.5 37.667v29.166c0 6.917 5.583 12.5 12.5 12.5h12.5V46H8.833v-8.333C8.833 21.542 21.875 8.5 38 8.5s29.167 13.042 29.167 29.167V46H50.5v33.333h16.667V83.5H38v8.333h25c6.917 0 12.5-5.583 12.5-12.5V37.667c0-20.709-16.792-37.5-37.5-37.5z" fill="#3077C6"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 84" id="comm">
+    <path d="M54.5 8.667v29.166H13.542l-4.875 4.875V8.667H54.5zM58.667.333H4.5A4.179 4.179 0 00.333 4.5v58.333L17 46.167h41.667A4.179 4.179 0 0062.833 42V4.5A4.179 4.179 0 0058.667.333zM79.5 17h-8.333v37.5H17v8.333A4.179 4.179 0 0021.167 67H67l16.667 16.667v-62.5A4.179 4.179 0 0079.5 17z" fill="#3077C6"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 68" id="book">
+    <path d="M16.667 9h75V.667h-75C12.083.667 8.333 4.417 8.333 9v45.833H0v12.5h58.333v-12.5H16.667V9zm79.166 8.333h-25a4.179 4.179 0 00-4.166 4.167v41.667a4.179 4.179 0 004.166 4.166h25A4.179 4.179 0 00100 63.167V21.5a4.179 4.179 0 00-4.167-4.167zm-4.166 37.5H75V25.667h16.667v29.166z" fill="#3077C6"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 84" id="guest">
+    <path d="M83.5 29.333H57.208l3.959-19.041.125-1.334a6.272 6.272 0 00-1.834-4.416L55.042.167 27.625 27.625a8.147 8.147 0 00-2.458 5.875v41.667c0 4.583 3.75 8.333 8.333 8.333H71a8.277 8.277 0 007.667-5.083L91.25 49.042A8.232 8.232 0 0091.833 46v-8.333c0-4.584-3.75-8.334-8.333-8.334zM83.5 46L71 75.167H33.5V33.5l18.083-18.083-4.625 22.25H83.5V46zM.167 33.5h16.666v50H.167v-50z" fill="#3077C6"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search-icon">
+    <path d="M11.4351 10.0629H10.7124L10.4563 9.81589C11.3528 8.77301 11.8925 7.4191 11.8925 5.94625C11.8925 2.66209 9.23042 0 5.94625 0C2.66209 0 0 2.66209 0 5.94625C0 9.23042 2.66209 11.8925 5.94625 11.8925C7.4191 11.8925 8.77301 11.3528 9.81589 10.4563L10.0629 10.7124V11.4351L14.6369 16L16 14.6369L11.4351 10.0629ZM5.94625 10.0629C3.66838 10.0629 1.82962 8.22413 1.82962 5.94625C1.82962 3.66838 3.66838 1.82962 5.94625 1.82962C8.22413 1.82962 10.0629 3.66838 10.0629 5.94625C10.0629 8.22413 8.22413 10.0629 5.94625 10.0629Z" fill="#BFBFBF"/>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="arow">
+    <g filter="url(#filter0_d)">
+      <circle cx="24" cy="20" r="20" fill="#F3F3F4"></circle>
+      <path d="M19.941 29.823l6.159-8.211a2 2 0 000-2.4L19.941 11" stroke="#383838" stroke-width="2"></path>
+    </g>
+    <defs>
+      <filter id="filter0_d" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
+        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"></feBlend>
+        <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feBlend>
+      </filter>
+    </defs>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 54" id="accountreviews">
+    <path d="M27 .333C12.28.333.333 12.28.333 27 .333 41.72 12.28 53.667 27 53.667c14.72 0 26.667-11.947 26.667-26.667C53.667 12.28 41.72.333 27 .333zm0 8c4.427 0 8 3.574 8 8 0 4.427-3.573 8-8 8a7.99 7.99 0 01-8-8c0-4.426 3.573-8 8-8zM27 46.2c-6.667 0-12.56-3.413-16-8.587.08-5.306 10.667-8.213 16-8.213 5.307 0 15.92 2.907 16 8.213-3.44 5.174-9.333 8.587-16 8.587z" fill="#BFBFBF"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 8" id="navigation">
+    <circle cx="4" cy="4" r="4" fill="#333"></circle>
+    <circle cx="20" cy="4" r="3.5" stroke="#333"></circle>
+    <circle cx="36" cy="4" r="3.5" stroke="#333"></circle>
+    <circle cx="52" cy="4" r="3.5" stroke="#333"></circle>
+  </symbol>
+</svg>
