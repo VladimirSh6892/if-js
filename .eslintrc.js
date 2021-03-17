@@ -14,6 +14,7 @@ module.exports = {
     ecmaVersion: 12,
   },
   rules: {
+    'max-classes-per-file': ["error", 3],
     'no-plusplus': 'off',
     'eslint-disable no-undef': 'off',
     'no-restricted-syntax': 'off',
