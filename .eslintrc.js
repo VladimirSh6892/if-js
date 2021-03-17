@@ -17,6 +17,6 @@ module.exports = {
     'max-classes-per-file': ["error", 3],
     'no-plusplus': 'off',
     'eslint-disable no-undef': 'off',
-    'prefer-destructuring':'warn',
+    'no-restricted-syntax': 'off',
   },
 };

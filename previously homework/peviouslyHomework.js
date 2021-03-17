@@ -1,4 +1,5 @@
 //  lessons2
+console.log('<-----Lessons2----->');
 let user = 'John Doe';
 console.log(user); //   output John Doe
 const student = 'Vladimir';
@@ -16,11 +17,11 @@ console.log(test); //   output 20
 console.log(Boolean(test)); //  output true
 
 const arr1 = [2, 3, 5, 8];
-let result = 1;
+let resul = 1;
 for (let i = 0; i < arr1.length; i++) {
-  result *= arr1[i];
+  resul *= arr1[i];
 }
-console.log(result);
+console.log(resul);
 
 const arr2 = [2, 5, 8, 15, 0, 6, 20, 3];
 for (let i = 0; i < arr2.length; i++) {
@@ -37,6 +38,7 @@ for (let i = 0; i < arr3.length; i++) {
 }
 
 //  lessons3
+console.log('<-----Lessons3----->');
 
 function palindrome(text) {
   for (let i = 0; i < text.length / 2; i += 1) {
@@ -69,7 +71,7 @@ arr = arr.join().replace(/0/g, 'zero');
 console.log(arr.split(','));
 
 //  lessons4
-
+console.log('<-----Lessons4----->');
 const text1 = document.getElementById('text1');
 const text2 = document.getElementById('text2');
 const text3 = document.getElementById('text3');
@@ -79,7 +81,7 @@ const colorText = () => {
   let x = 0;
   return (e) => {
     e.target.style.color = colors[x];
-    x = x > colors.length ? 0 : x + 1;
+    x = x > 3 ? 0 : x + 1;
   };
 };
 
@@ -93,7 +95,7 @@ function sum(a, b) {
 console.log(sum(5, 2));
 
 //  lessons5
-
+console.log('<-----Lessons5----->');
 const data = [{
   country: 'Russia',
   city: 'Saint Petersburg',
@@ -199,7 +201,7 @@ const dateFormat = (date2) => date2.split('-').reverse().join('.');
 console.log(dateFormat(date));
 
 //  lessons6
-
+console.log('<-----Lessons6----->');
 const hotels = [{
   name: 'Hotel Leopold',
   city: 'Saint Petersburg',
@@ -396,7 +398,7 @@ const palindromeString = (str) => {
 console.log(palindromeString('noon'));
 
 //  lessons7
-
+console.log('<-----Lessons7----->');
 const obj1 = {
   a: 'a',
   b: {
@@ -448,102 +450,35 @@ const deepEqual = (object1, object2) => {
 console.log(deepEqual(obj1, obj2));
 console.log(deepEqual(obj1, obj3));
 
-//  lessons8
+// calendar
+console.log('<-----Calendar----->');
+const calendarMonth = (inMonth, inWeek, ofWeek) => {
+  if (ofWeek >= inWeek) {
+    throw new Error('Invalid data');
+  }
+  const withoutTail = inMonth + ofWeek;
+  const iteration = withoutTail + (inWeek - (withoutTail % inWeek));
+  let currentDay = inMonth - ofWeek;
+  let arrayIndex = 0;
+  const result = [
+    [],
+  ];
 
-const studentsData = [
-  {
-    firstName: 'Василий',
-    lastName: 'Петров',
-    admissionYear: 2019,
-    courseName: 'Java',
-  },
-  {
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    admissionYear: 2018,
-    courseName: 'JavaScript',
-  },
-  {
-    firstName: 'Александр',
-    lastName: 'Федоров',
-    admissionYear: 2017,
-    courseName: 'Python',
-  },
-  {
-    firstName: 'Николай',
-    lastName: 'Петров',
-    admissionYear: 2019,
-    courseName: 'Android',
-  },
-];
-class User {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-class Student extends User {
-  constructor(firstName, lastName, admissionYear, courseName) {
-    super(firstName, lastName);
-    this.admissionYear = admissionYear;
-    this.courseName = courseName;
-  }
-
-  get course() {
-    return new Date().getFullYear() - this.admissionYear;
-  }
-}
-class Students {
-  constructor(students) {
-    this.students = students.map(({
-      firstName, lastName, admissionYear, courseName,
-    }) => new Student(firstName, lastName, admissionYear, courseName));
-  }
-
-  getInfo() {
-    this.students.sort((prev, next) => prev.course - next.course);
-    const arrgument = [];
-    this.students.forEach((item) => {
-      arrgument.push(`${item.fullName} - ${item.courseName}, ${item.course} курс`);
-    });
-    return arrgument;
-  }
-}
-const students = new Students(studentsData);
-console.log(students.getInfo());
-
-//  lessons9
-console.log('<-----Lessons9----->');
-const text4 = document.getElementById('text4');
-const text5 = document.getElementById('text5');
-const text6 = document.getElementById('text6');
-const colors2 = {
-  data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
-  [Symbol.iterator]() {
-    return this;
-  },
-  next(textColor) {
-    let i = this.data.indexOf(textColor);
-    if (i === -1 || i === this.data.length - 1) {
-      i = 0;
-    } else {
-      i++;
+  for (let i = 1; i <= iteration; i++) {
+    if (result[arrayIndex].length === inWeek) {
+      if (result[arrayIndex][result[arrayIndex].length - 1] === inMonth) {
+        break;
+      }
+      arrayIndex++;
+      result[arrayIndex] = [];
     }
-    return {
-      done: false,
-      value: this.data[i++],
-    };
-  },
-};
-const textCounter = (e) => {
-  const colorText = document.getElementById(e.target.id).style.color;
-  e.target.style.color = colors2.next(colorText).value;
+    currentDay++;
+    if (currentDay > inMonth) {
+      currentDay = 1;
+    }
+    result[arrayIndex].push(currentDay);
+  }
+  return result;
 };
 
-text4.addEventListener('click', textCounter);
-text5.addEventListener('click', textCounter);
-text6.addEventListener('click', textCounter);
+console.log(calendarMonth(31, 7, 0)); //  march
