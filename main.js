@@ -8,20 +8,24 @@ const colors2 = {
   [Symbol.iterator]() {
     return this;
   },
-  next(counter) {
+  next(textColor) {
+    let i = this.data.indexOf(textColor);
+    if (i === -1 || i === this.data.length - 1) {
+      i = 0;
+    } else {
+      i++;
+    }
     return {
-      value: this.data[counter],
       done: false,
+      value: this.data[i++],
     };
   },
 };
-function textCounter() {
-  let counter = 0;
-  return (e) => {
-    e.target.style.color = colors2.next(counter).value;
-    counter = counter > 3 ? 0 : counter + 1;
-  };
-}
-text4.addEventListener('click', textCounter());
-text5.addEventListener('click', textCounter());
-text6.addEventListener('click', textCounter());
+const textCounter = (e) => {
+  const colorText = document.getElementById(e.target.id).style.color;
+  e.target.style.color = colors2.next(colorText).value;
+};
+
+text4.addEventListener('click', textCounter);
+text5.addEventListener('click', textCounter);
+text6.addEventListener('click', textCounter);
