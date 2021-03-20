@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Triphouse</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   </head>
   <body>
     <header>
@@ -33,7 +34,9 @@
           </div>
         </div>
         <div class="header-titles">
-          <h1 class="header-titles__title">Discover stays <br>to live, work or just relax</h1>
+          <h1 class="header-titles__title">
+            Discover stays <br>
+            to live, work or just relax</h1>
         </div>
         <form class="header-form">
           <div class="header-form__input">
@@ -42,23 +45,16 @@
               <label for="destination" class="destination">Your destination or hotel name</label>
             </div>
             <div class="header-form__input-form col-2">
-              <input type="text" id = "date" required onblur="(this.type='text')" onfocus="(this.type='date')"/>
+              <input type="text" id = "date" required />
               <label for="date" class="date">Check-in — Check-out</label>
             </div>
-            <div class="header-form__input-form col-1">
-              <input type="text" id = "adults-head" required/>
-              <label for="adults-head" class="adults-head">Adults</label>
+            
+
+            <div class="header-form__input-form col-1" id = "header-form__input-form-people">
+              <input type="text" id="people" required />
+              <label for="people" class="people" id = "label_people">Adults - Children - Room</label>
             </div>
-            <span class="horizontal-line-input-one"></span>
-            <div class="header-form__input-form col-1">
-              <input type="text" id = "children-head" required/>
-              <label for="children-head" class="children-head">Children</label>
-            </div>
-            <span class="horizontal-line-input-one"></span>
-            <div class="header-form__input-form col-1">
-              <input type="text" id = "room-head" required/>
-              <label for="room-head" class="room-head">Room</label>
-            </div>
+
             <div class="header-form__input-form col-2">
               <input type="submit" value="Search"/>
             </div>
@@ -110,15 +106,18 @@
     </header>
     
     <section class="guests">
-      <div class="container ">
+      <div class="container">
         <div class="guests-loves__title"><h2>Homes guests loves</h2></div>
-        <div class="guests-loves__image" id="guests-loves__image">
-          <a href="#">
-            <img src="./image/arrow.svg" alt="more butom" class="guest-loves-btn">
-          </a>
+        <div class="guest-loves__slider-wrapper slider-wrapper">
+          <div class="guest-loves__swiper-container swiper-container">
+            <div class="guests-loves__image guest-loves__swiper-wrapper swiper-wrapper" id="guests-loves__image"></div>
+          </div>
+          <div class="swiper-button-next"><img src="./image/arrow.svg" alt="butom right"></div>
+          <div class="swiper-button-prev"><img src="./image/arrow.svg" alt="butom left"></div>
         </div>
       </div>
     </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="triphouse.js" ></script>
   </body>
 </html>
