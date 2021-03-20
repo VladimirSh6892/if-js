@@ -23,18 +23,64 @@ const data = [
     country: 'Germany',
     imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379364/fe/hostel-friendship_aw6tn7.jpg',
   },
+  {
+    name: 'Radisson Blu Hotel',
+    city: 'Kyiv',
+    country: 'Ukraine',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/radisson-blu-hotel_jwtowg.jpg',
+  },
+  {
+    name: 'Paradise Hotel',
+    city: 'Guadalupe',
+    country: 'Mexico',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/paradise-hotel_i6whae.jpg',
+  },
+  {
+    name: 'Hotel Grindewald',
+    city: 'Interlaken',
+    country: 'Switzerland',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/hotel-grindewald_zsjsmy.jpg',
+  },
+  {
+    name: 'The Andaman Resort',
+    city: 'Port Dickson',
+    country: 'Malaysia',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
+  },
 ];
 
 const hotels = document.querySelector('#guests-loves__image');
 
 data.forEach((item) => {
   hotels.innerHTML += `
-    <figure class="guests-loves__image-wrapper guests-loves__image-hotel">
-        <figcaption class="guests-loves__destination">
-            <img src="${item.imageUrl}" alt="${item.country}" class="guests-loves__image-photo">
-            <span class="guests-loves__hotel">${item.name}</span>
-            <span class="guests-loves__city">${item.city}</span>
-        </figcaption>
-      </figure>
+    <figure class="guests-loves__image-wrapper guests-loves__swiper-slide">
+      <div class="guests-loves__image">
+        <img src="${item.imageUrl}" alt="${item.country}" class="guests-loves__image-photo">
+      </div> 
+      <figcaption class="guests-loves__destination">   
+        <span class="guests-loves__hotel">${item.name}</span>
+        <span class="guests-loves__city">${item.city}</span>
+      </figcaption>
+    </figure>
   `;
+});
+new Swiper('.guest-loves__swiper-container', {
+  slideClass: 'guests-loves__swiper-slide',
+  wrapperClass: 'guest-loves__swiper-wrapper',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+      slidesPerGroup: 2,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+      slidesPerGroup: 4,
+    },
+  },
 });
