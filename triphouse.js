@@ -75,12 +75,12 @@ new Swiper('.guest-loves__swiper-container', {
     320: {
       slidesPerView: 2,
       spaceBetween: 16,
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
     },
     1200: {
       slidesPerView: 4,
       spaceBetween: 16,
-      slidesPerGroup: 4,
+      slidesPerGroup: 1,
     },
   },
 });
