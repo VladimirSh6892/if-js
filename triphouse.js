@@ -64,6 +64,7 @@ data.forEach((item) => {
     </figure>
   `;
 });
+
 new Swiper('.guest-loves__swiper-container', {
   slideClass: 'guests-loves__swiper-slide',
   wrapperClass: 'guest-loves__swiper-wrapper',
