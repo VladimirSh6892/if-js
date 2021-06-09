@@ -97,3 +97,21 @@ const textCounter = (e) => {
 text4.addEventListener('click', textCounter);
 text5.addEventListener('click', textCounter);
 text6.addEventListener('click', textCounter);
+
+function getSalary() {
+  let hours = prompt('Hours in week', 40);
+  let rate = promt("rate");
+  let basicPay = rate * hours;
+  let owerTime;
+
+  if(hours >= 40) {
+    basicPay = rate * 40;
+    owerTime = basicPay * 1.5 * hours - 40;
+    let payment = basicPay + owerTime;
+    alert(" You" + payment);
+  } else {
+    alert("total" + basicPay);
+  }
+};
+
+getSalary();
